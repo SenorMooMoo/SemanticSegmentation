@@ -28,9 +28,9 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 This project comes bundled with several pretrained models, which can be found in the `pretrained` directory. To infer segmentation masks on your images run `evaluate_images`.
 ```bash
 # to display the output
-python evaluate_images.py --images ~/Pictures/ --model pretrained/model_segmentation_skin_30.pth --model-type FCNResNet101 --display
+python evaluate_images.py --images Pictures/ --model pretrained/model_segmentation_skin_30.pth --model-type FCNResNet101 --display
 # to save the output
-python evaluate_images.py --images ~/Pictures/ --model pretrained/model_segmentation_skin_30.pth --model-type FCNResNet101 --save
+python evaluate_images.py --images Pictures/ --model pretrained/model_segmentation_skin_30.pth --model-type FCNResNet101 --save --threshold 0.25 
 ```
 
 To run the real-time models change the `--model-type`, 
